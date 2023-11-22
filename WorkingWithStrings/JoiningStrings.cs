@@ -18,9 +18,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetColonSeparatedString(string[] values)
         {
-            // TODO #6-1. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Join method: https://docs.microsoft.com/en-us/dotnet/api/system.string.join
-            throw new NotImplementedException();
+            return string.Join(':', values);
         }
 
         /// <summary>
@@ -28,9 +26,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetCommaSeparatedStringWithoutFirstElement(string[] values)
         {
-            // TODO #6-2. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Join method: https://docs.microsoft.com/en-us/dotnet/api/system.string.join
-            throw new NotImplementedException();
+            return string.Join(',', values, 1, values.Length - 1);
         }
 
         /// <summary>
@@ -38,9 +34,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetHyphenSeparatedStringWithoutFirstAndLastElements(string[] values)
         {
-            // TODO #6-3. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Join method: https://docs.microsoft.com/en-us/dotnet/api/system.string.join
-            throw new NotImplementedException();
+            return string.Join('-', values, 1, values.Length - 2);
         }
 
         /// <summary>
@@ -48,9 +42,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetPlusSeparatedString(IEnumerable<string> values)
         {
-            // TODO #6-4. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Join method: https://docs.microsoft.com/en-us/dotnet/api/system.string.join
-            throw new NotImplementedException();
+            return string.Join('+', values);
         }
 
         /// <summary>
@@ -58,9 +50,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetBackslashSeparatedString(IEnumerable<object> values)
         {
-            // TODO #6-5. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Join method: https://docs.microsoft.com/en-us/dotnet/api/system.string.join
-            throw new NotImplementedException();
+            return string.Join('\\', values);
         }
 
         /// <summary>
@@ -68,9 +58,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringSeparatedString(object[] values)
         {
-            // TODO #6-6. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Join method: https://docs.microsoft.com/en-us/dotnet/api/system.string.join
-            throw new NotImplementedException();
+            return string.Join("], [", values);
         }
 
         /// <summary>
@@ -78,9 +66,8 @@ namespace WorkingWithStrings
         /// </summary>
         public static string GetStringSeparatedStringForLastThreeElements(string separator, string[] values)
         {
-            // TODO #6-7. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Join method: https://docs.microsoft.com/en-us/dotnet/api/system.string.join
-            throw new NotImplementedException();
+            return string.Join(separator, values, values.Length - 3, 3);
+
         }
     }
 }
