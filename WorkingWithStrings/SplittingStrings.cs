@@ -17,9 +17,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string[] SplitColonSeparatedString(string str)
         {
-            // TODO #5-1. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Split method: https://docs.microsoft.com/en-us/dotnet/api/system.string.split
-            throw new NotImplementedException();
+            return str.Split(':');
         }
 
         /// <summary>
@@ -27,9 +25,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string[] SplitCommaSeparatedStringMaxTwoElements(string str)
         {
-            // TODO #5-2. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Split method: https://docs.microsoft.com/en-us/dotnet/api/system.string.split
-            throw new NotImplementedException();
+            return str.Split(',', 2);
         }
 
         /// <summary>
@@ -37,9 +33,8 @@ namespace WorkingWithStrings
         /// </summary>
         public static string[] SplitColonSeparatedStringMaxThreeElements(string str)
         {
-            // TODO #5-3. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Split method: https://docs.microsoft.com/en-us/dotnet/api/system.string.split
-            throw new NotImplementedException();
+            return str.Split(':', 3);
+
         }
 
         /// <summary>
@@ -47,9 +42,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string[] SplitHyphenSeparatedStringMaxThreeElementsRemoveEmptyStrings(string str)
         {
-            // TODO #5-4. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Split method: https://docs.microsoft.com/en-us/dotnet/api/system.string.split
-            throw new NotImplementedException();
+            return str.Split('-', 3, StringSplitOptions.RemoveEmptyEntries);
         }
 
         /// <summary>
@@ -57,9 +50,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string[] SplitColonAndCommaSeparatedStringMaxFourElementsRemoveEmptyStrings(string str)
         {
-            // TODO #5-5. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Split method: https://docs.microsoft.com/en-us/dotnet/api/system.string.split
-            throw new NotImplementedException();
+            return str.Split(new[] { ',', ':' }, 4, StringSplitOptions.RemoveEmptyEntries);
         }
 
         /// <summary>
@@ -67,9 +58,9 @@ namespace WorkingWithStrings
         /// </summary>
         public static string[] GetOnlyWords(string str)
         {
-            // TODO #5-6. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Split method: https://docs.microsoft.com/en-us/dotnet/api/system.string.split
-            throw new NotImplementedException();
+            char[] separators = { ' ', '\t', ',', '.', ':', ';', '!', '?', '-', '_' };
+
+            return str.Split(separators, StringSplitOptions.RemoveEmptyEntries);
         }
 
         /// <summary>
@@ -77,9 +68,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string[] GetDataFromCsvLine(string str)
         {
-            // TODO #5-7. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Split method: https://docs.microsoft.com/en-us/dotnet/api/system.string.split
-            throw new NotImplementedException();
+            return str.Split(new[] { ", ", "," }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }
