@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Text;
 
 namespace WorkingWithStrings
 {
@@ -17,9 +19,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string ReturnStringWithRepeatedChars(char c, int count)
         {
-            // TODO #2-1. Implement the method using String(Char, Int32) constructor
-            // See the constructor documentation page: https://docs.microsoft.com/en-us/dotnet/api/system.string.-ctor#System_String__ctor_System_Char_System_Int32_
-            throw new NotImplementedException();
+            return new string(c, count);
         }
 
         /// <summary>
@@ -27,9 +27,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string ReturnStringFromCharArray(char[] c)
         {
-            // TODO #2-2. Implement the method using String(Char[]) constructor
-            // See the constructor documentation page: https://docs.microsoft.com/en-us/dotnet/api/system.string.-ctor#System_String__ctor_System_Char___
-            throw new NotImplementedException();
+            return new string(c);
         }
 
         /// <summary>
@@ -37,9 +35,7 @@ namespace WorkingWithStrings
         /// </summary>
         public static string ReturnStringFromCharArray(char[] c, int startIndex, int length)
         {
-            // TODO #2-3. Implement the method using String(Char[], Int32, Int32) constructor
-            // See the constructor documentation page: https://docs.microsoft.com/en-us/dotnet/api/system.string.-ctor#System_String__ctor_System_Char___System_Int32_System_Int32_
-            throw new NotImplementedException();
+            return new string(c, startIndex, length);
         }
     }
 }
